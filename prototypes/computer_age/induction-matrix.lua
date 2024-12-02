@@ -526,7 +526,7 @@ data:extend({
             {type="item", name="ei_superior-data", amount=20},
             {type="item", name="ei_odd-plating", amount=100},
             {type="item", name="ei_carbon-structure", amount=40},
-            {type="item", name="rocket-control-unit", amount=10},
+            {type="item", name="processing-unit", amount=10},
         },
         results = {{type="item", name="ei_induction-matrix-superior-converter", amount=1}},
         enabled = false,

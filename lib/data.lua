@@ -251,6 +251,10 @@ ei_data.lab_inputs["big-lab"] = {
     "ei_space-quantum-age-tech",
     "ei_exotic-age-tech",
     "ei_black-hole-exotic-age-tech",
+
+    "ei_knowledge-tech",
+    "ei_knowledge-tech-2",
+    "ei_knowledge-tech-3",
 }
 
 -- EI equivalent of vanilla science packs
@@ -294,7 +298,6 @@ ei_data.add_to_sub_age["advanced-computer-age"] = {
     "research-speed-4",
     -- "spidertron",
     "processing-unit",
-    "rocket-control-unit",
     "ei_rocket-parts",
     "ei_quantum-age",
     "speed-module-3",
@@ -335,7 +338,7 @@ ei_data.sub_age["four-quantum-age"] = "quantum-age"
 
 
 ei_data.add_to_sub_age["fusion-quantum-age"] = {
-    "fusion-reactor-equipment",
+    "fission-reactor-equipment",
     "worker-robots-speed-5",
     "worker-robots-storage-3",
     "laser-weapons-damage-6",
@@ -348,7 +351,6 @@ ei_data.add_to_sub_age["both-quantum-age"] = {
     "inserter-capacity-bonus-7",
     "laser-weapons-damage-7",
     "stronger-explosives-7",
-    "follower-robot-count-7",
 }
 
 ei_data.sub_age["black-hole-exotic-age"] = "exotic-age"
@@ -473,7 +475,6 @@ ei_data.tech_structure["steam-age"] = {
     "advanced-material-processing",
     -- train
     "automated-rail-transportation",
-    "rail-signals",
     "braking-force-1",
     "braking-force-2",
     "weapon-shooting-speed-2",
@@ -625,7 +626,6 @@ ei_data.tech_structure["computer-age"] = {
     "logistic-system",
     "low-density-structure",
     "mining-productivity-2",
-    "rocket-control-unit",
     "rocket-fuel",
     "rocket-silo",
     "rocketry",
@@ -640,7 +640,7 @@ ei_data.tech_structure["computer-age"] = {
 
 ei_data.tech_structure["quantum-age"] = {
     "atomic-bomb",
-    "fusion-reactor-equipment",
+    "fission-reactor-equipment",
     "inserter-capacity-bonus-5",
     "inserter-capacity-bonus-6",
     "inserter-capacity-bonus-7",
@@ -658,9 +658,6 @@ ei_data.tech_structure["quantum-age"] = {
     "laser-weapons-damage-5",
     "laser-weapons-damage-6",
     "laser-weapons-damage-7",
-    "follower-robot-count-5",
-    "follower-robot-count-6",
-    "follower-robot-count-7",
     "artillery-shell-range-1",
     "artillery-shell-speed-1",
 }

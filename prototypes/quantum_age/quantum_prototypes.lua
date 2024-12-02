@@ -1374,7 +1374,7 @@ data:extend({
         category = "ei_nano-factory",
         energy_required = 60,
         ingredients = {
-            {type = "item", name = "fusion-reactor-equipment", amount = 1},
+            {type = "item", name = "fission-reactor-equipment", amount = 1},
             {type = "item", name = "energy-shield-mk2-equipment", amount = 2},
             {type = "item", name = "ei_steel-mechanical-parts", amount = 20},
         },
@@ -1779,7 +1779,7 @@ data:extend({
         energy_required = 10,
         ingredients =
         {
-            {type="item", name="rocket-control-unit", amount=1},
+            {type="item", name="processing-unit", amount=1},
             {type="item", name="ei_carbon-structure", amount=2},
             {type="item", name="ei_steel-mechanical-parts", amount=8},
             {type="item", name="ei_insulated-wire", amount=6},
@@ -2388,7 +2388,7 @@ data:extend({
         type = "technology",
         icon = ei_graphics_item_path.."fusion-drive.png",
         icon_size = 128,
-        prerequisites = {"fusion-reactor-equipment"},
+        prerequisites = {"fission-reactor-equipment"},
         effects = {
             {
                 type = "unlock-recipe",

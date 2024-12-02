@@ -38,7 +38,9 @@ local function set_packs(tech, ingredients, exclude)
     end
 
     -- set pack for tech
-    data.raw["technology"][tech].unit.ingredients = ingredients
+    if data.raw["technology"][tech].unit then
+        data.raw["technology"][tech].unit.ingredients = ingredients
+    end
 
 end
 
@@ -230,7 +232,7 @@ end
 for i,v in pairs(data.raw.technology) do
     if string.sub(i, 1, 3) == "se-" then goto continue end
     -- if string.sub(i, 1, 3) == "kr-" then goto continue end
-    if data.raw.technology[i].unit.ingredients then
+    if data.raw.technology[i].unit and data.raw.technology[i].unit.ingredients then
         
         -- check if tech contains vanilla science pack
         for x,y in ipairs(data.raw.technology[i].unit.ingredients) do
@@ -262,7 +264,7 @@ end
 for i,v in pairs(data.raw.technology) do
     if string.sub(i, 1, 3) == "se-" then goto continue end
     -- if string.sub(i, 1, 3) == "kr-" then goto continue end
-    if data.raw.technology[i].unit.ingredients then
+    if data.raw.technology[i].unit and data.raw.technology[i].unit.ingredients then
         
         -- check if tech contains vanilla science pack
         for x,y in ipairs(data.raw.technology[i].unit.ingredients) do

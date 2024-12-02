@@ -68,8 +68,10 @@ local function set_packs(tech, ingredients)
         return
     end
 
-    -- set pack for tech
-    data.raw["technology"][tech].unit.ingredients = ingredients
+    -- set pack for tech, if it is unlocked with packs
+    if data.raw["technology"][tech].unit then
+        data.raw["technology"][tech].unit.ingredients = ingredients
+    end
 
 end
 

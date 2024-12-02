@@ -579,7 +579,7 @@ local K2_CHANGES = {
         ["fast-inserter-to-parts"] = {category = "ei_crushing"},
         ["long-handed-inserter-to-parts"] = {category = "ei_crushing"},
         ["burner-inserter-to-parts"] = {category = "ei_crushing"},
-        ["stack-inserter-to-parts"] = {category = "ei_crushing"},
+        ["bulk-inserter-to-parts"] = {category = "ei_crushing"},
         ["stack-filter-inserter-to-parts"] = {category = "ei_crushing"},
         ["filter-inserter-to-parts"] = {category = "ei_crushing"},
         ["superior-inserter-to-parts"] = {category = "ei_crushing"},
@@ -615,13 +615,13 @@ local K2_CHANGES = {
     ["generator-equipment"] = {
         ["nuclear-reactor-equipment"] = {
             burner = {
-                type = "burner", fuel_category = "ei_nuclear-fuel",
+                type = "burner", fuel_categories = {"ei_nuclear-fuel"},
                 effectivity = 0.25, fuel_inventory_size = 3, burnt_inventory_size = 3
             },
         },
-        ["fusion-reactor-equipment"] = {
+        ["fission-reactor-equipment"] = {
             burner = {
-                type = "burner", fuel_category = "ei_fusion-fuel",
+                type = "burner", fuel_categories = {"ei_fusion-fuel"},
                 effectivity = 1, fuel_inventory_size = 1, burnt_inventory_size = 1
             },
         },
@@ -813,7 +813,7 @@ local new_prerequisites = {
         ["ei_plasma-turret"] = {{"ei_high-tech-parts", "kr-laser-artillery-turret"},{},false},
         ["kr-antimatter-reactor"] = {{"ei_antimatter-cube"},{},false},
         ["kr-antimatter-ammo"] = {{"kr-antimatter-reactor", "kr-laser-artillery-turret", "kr-rocket-turret"},{},false},
-        ["kr-antimatter-reactor-equipment"] = {{"kr-antimatter-reactor", "fusion-reactor-equipment"},{},false},
+        ["kr-antimatter-reactor-equipment"] = {{"kr-antimatter-reactor", "fission-reactor-equipment"},{},false},
         ["ei_personal-shield"] = {{"kr-energy-shield-mk4-equipment", "ei_high-tech-parts"},{},false},
     },
 }

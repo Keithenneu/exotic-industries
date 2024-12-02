@@ -350,11 +350,6 @@ local new_ingredients_table = {
         {type="item", name="ei_module-base", amount=1},
         {type="item", name="speed-module-2", amount=2},
     },
-    ["rocket-control-unit"] = {
-        {type="item", name="processing-unit", amount=1},
-        {type="item", name="ei_high-energy-crystal", amount=1},
-        {type="item", name="ei_insulated-wire", amount=6},
-    },
     ["rocket-part"] = {
         {type="item", name="ei_rocket-parts", amount=10},
         {type="item", name="rocket-fuel", amount=10},
@@ -427,7 +422,7 @@ local new_ingredients_table = {
         {type="item", name="concrete", amount=1000},
         {type="item", name="ei_advanced-motor", amount=50},
     },
-    ["fusion-reactor-equipment"] = {
+    ["fission-reactor-equipment"] = {
         {type="item", name="ei_plasma-cube", amount=4},
         {type="item", name="processing-unit", amount=100},
         {type="item", name="ei_fusion-data", amount=40},
@@ -778,8 +773,6 @@ new_prerequisites_table["computer-age"] = {
     {"low-density-structure", "ei_advanced-steel"},
     {"rocket-fuel", "refined-flammables-6"},
     {"rocket-fuel", "ei_oxygen-gas"},
-    {"rocket-control-unit", "processing-unit"},
-    {"rocket-control-unit", "ei_high-energy-crystal"},
     {"ei_rocket-parts", "rocket-fuel"},
     {"rocket-silo", "ei_rocket-parts"},
     {"processing-unit", "ei_advanced-computer-age-tech"},
@@ -793,12 +786,11 @@ new_prerequisites_table["quantum-age"] = {
     {"worker-robots-speed-6", "ei_deep-exploration"},
     {"worker-robots-speed-5", "ei_fusion-data"},
     {"worker-robots-storage-3", "ei_fusion-data"},
-    {"fusion-reactor-equipment", "ei_fusion-reactor"},
-    {"fusion-reactor-equipment", "ei_plasma-cube"},
+    {"fission-reactor-equipment", "ei_fusion-reactor"},
+    {"fission-reactor-equipment", "ei_plasma-cube"},
     {"laser-weapons-damage-6", "ei_fusion-data"},
     {"laser-weapons-damage-7", "ei_deep-exploration"},
     {"stronger-explosives-7", "ei_deep-exploration"},
-    {"follower-robot-count-7", "ei_deep-exploration"},
     {"physical-projectile-damage-7", "ei_deep-exploration"},
     {"refined-flammables-7", "ei_deep-exploration"},
     {"artillery-shell-range-1", "artillery"},
@@ -819,7 +811,6 @@ end
 
 numbered_buffs = {
     "stronger-explosives-7",
-    "follower-robot-count-7",
     "mining-productivity-4",
     "research-speed-6",
     "worker-robots-speed-6",
@@ -1354,8 +1345,8 @@ end
 
 -- increase power output of fusion reactor equipment
 
-data.raw["generator-equipment"]["fusion-reactor-equipment"].power = "3MW"
-data.raw["item"]["fusion-reactor-equipment"].order = "a[energy-source]-g[fusion-reactor-equipment]"
+data.raw["generator-equipment"]["fission-reactor-equipment"].power = "3MW"
+data.raw["item"]["fission-reactor-equipment"].order = "a[energy-source]-g[fission-reactor-equipment]"
 
 
 -- hide unused items

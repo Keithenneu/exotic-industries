@@ -27,3 +27,11 @@ require("scripts/data-final-updates/knowledge-console")
 
 -- tech cleanup for k2
 require("scripts/data-final-updates/krastorio_tech_cleanup")
+
+for proto_name, proto in pairs(data.raw) do
+    for entry_name, _ in pairs(proto) do
+        if string.find(entry_name, ":") then
+            log("bad name "..proto_name.." "..entry_name)
+        end
+    end
+end

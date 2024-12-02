@@ -115,7 +115,7 @@ function ei_lib.recipe_swap(recipe, old_ingredient, new_ingredient, amount)
                 end
             end
         else
-            for i,v in pairs(data.raw.recipe[recipe].ingredients) do
+            for i,v in pairs(data.raw.recipe[recipe].ingredients or {}) do
                 local item_amount = v[2] or v["amount"]
                 local item_name = v[1] or v["name"]
                 if item_name == old_ingredient then
@@ -180,7 +180,7 @@ function ei_lib.recipe_swap(recipe, old_ingredient, new_ingredient, amount)
         end
     else
         -- loop over all ingredients of the recipe
-        for i,v in pairs(data.raw.recipe[recipe].ingredients) do
+        for i,v in pairs(data.raw.recipe[recipe].ingredients or {}) do
 
             local item_amount = v[2] or v["amount"]
             local item_name = v[1] or v["name"]

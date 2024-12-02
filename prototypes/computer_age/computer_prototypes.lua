@@ -1188,7 +1188,7 @@ data:extend({
         category = "crafting",
         energy_required = 15,
         ingredients = {
-            {type = "item", name = "rocket-control-unit", amount = 1},
+            {type = "item", name = "processing-unit", amount = 1},
             {type = "item", name = "ei_module-base", amount = 1},
             {type = "item", name = "ei_condensed-cryodust", amount = 1},
             {type = "item", name = "ei_sus-plating", amount = 3},
@@ -1260,7 +1260,7 @@ data:extend({
         energy_required = 10,
         ingredients =
         {
-            {type="item", name="rocket-control-unit", amount=1},
+            {type="item", name="processing-unit", amount=1},
             {type="item", name="low-density-structure", amount=2},
             {type="item", name="ei_steel-mechanical-parts", amount=4},
             {type="item", name="ei_insulated-wire", amount=2},
@@ -2226,7 +2226,7 @@ data:extend({
         type = "technology",
         icon = ei_graphics_tech_path.."rocket-parts.png",
         icon_size = 128,
-        prerequisites = {"rocket-control-unit", "low-density-structure", "rocketry"},
+        prerequisites = {"processing-unit", "low-density-structure", "rocketry"},
         effects = {
             {
                 type = "unlock-recipe",

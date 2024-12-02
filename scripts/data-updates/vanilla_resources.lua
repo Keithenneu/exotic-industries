@@ -16,40 +16,42 @@ end
 --REMOVE RESOURCES FROM AUTOPLACE
 --====================================================================================================
 
--- remove autoplace in prototypes and data.raw
-for i,v in ipairs(remove_resource) do
-    data.raw["resource"][v].autoplace = nil
-    data.raw["autoplace-control"][v] = nil
 
-    log("Removed autoplace for " .. v)
-end
+-- TODO: figure out how to do this in 2.0
+-- -- remove autoplace in prototypes and data.raw
+-- for i,v in ipairs(remove_resource) do
+--     data.raw["resource"][v].autoplace = nil
+--     data.raw["autoplace-control"][v] = nil
 
--- fix map-gen-presets by removing autoplace-control
--- note there can only be one map-gen-presets
-for i,v in pairs(data.raw["map-gen-presets"].default) do
+--     log("Removed autoplace for " .. v)
+-- end
 
-    -- check if basic_settings is set
-    if v.basic_settings then
+-- -- fix map-gen-presets by removing autoplace-control
+-- -- note there can only be one map-gen-presets
+-- for i,v in pairs(data.raw["map-gen-presets"].default) do
 
-        -- check if autoplace-controls is set
-        if v.basic_settings.autoplace_controls then
+--     -- check if basic_settings is set
+--     if v.basic_settings then
 
-            -- loop over and search for remove_resource
-            for x,y in pairs(data.raw["map-gen-presets"].default[i].basic_settings.autoplace_controls) do
-                for z,w in ipairs(remove_resource) do
+--         -- check if autoplace-controls is set
+--         if v.basic_settings.autoplace_controls then
 
-                    -- check if resource is found
-                    if x == w then
+--             -- loop over and search for remove_resource
+--             for x,y in pairs(data.raw["map-gen-presets"].default[i].basic_settings.autoplace_controls) do
+--                 for z,w in ipairs(remove_resource) do
 
-                        -- remove resource
-                        data.raw["map-gen-presets"].default[i].basic_settings.autoplace_controls[x] = nil
-                        log("Removed autoplace-control for " .. w .. " in map-gen-presets: ".. i)
-                    end
-                end
-            end
-        end
-    end
-end
+--                     -- check if resource is found
+--                     if x == w then
+
+--                         -- remove resource
+--                         data.raw["map-gen-presets"].default[i].basic_settings.autoplace_controls[x] = nil
+--                         log("Removed autoplace-control for " .. w .. " in map-gen-presets: ".. i)
+--                     end
+--                 end
+--             end
+--         end
+--     end
+-- end
 
 --====================================================================================================
 --REMOVE GAIA TILES/ENTITIES FORM NAUVIS
