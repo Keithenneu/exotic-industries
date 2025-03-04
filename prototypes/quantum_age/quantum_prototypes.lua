@@ -2719,7 +2719,7 @@ data:extend({
         icon = ei_graphics_tech_path.."speed-module-6.png",
         icon_size = 256,
         icon_mipmaps = 4,
-        prerequisites = {"ei_speed-module-5", "ei_cavity"},
+        prerequisites = {"ei_speed-module-5", "ei_cavity", "ei_sun-watching"},
         effects = {
             {
                 type = "unlock-recipe",
@@ -2743,7 +2743,7 @@ data:extend({
         icon = ei_graphics_tech_path.."effectivity-module-6.png",
         icon_size = 256,
         icon_mipmaps = 4,
-        prerequisites = {"ei_efficiency-module-5", "ei_cavity", "ei_sun-watching"},
+        prerequisites = {"ei_efficiency-module-5", "ei_cavity"},
         effects = {
             {
                 type = "unlock-recipe",
