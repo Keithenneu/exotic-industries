@@ -10,9 +10,9 @@ function model.check_init()
 
     -- K2
     ---------------------------------------------------------------------------
-    if script.active_mods["Krastorio2"] then
-        remote.call("kr-intergalactic-transceiver", "set_no_victory", true)
-    end
+    -- if script.active_mods["Krastorio2"] then
+    --     remote.call("kr-intergalactic-transceiver", "set_no_victory", true)
+    -- end
     
 end
 
